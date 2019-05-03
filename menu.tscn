@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "extends Control
+
+# Declare member variables here.
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+
+func _on_instances_pressed():
+	get_tree().change_scene(\"res://examples/instances/instances.tscn\")
+"
+
+[node name="menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = SubResource( 1 )
+
+[node name="center" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="vbox" type="VBoxContainer" parent="center"]
+margin_left = 436.0
+margin_top = 277.0
+margin_right = 588.0
+margin_bottom = 323.0
+
+[node name="title" type="Label" parent="center/vbox"]
+margin_right = 152.0
+margin_bottom = 14.0
+text = "Godot Simple Examples"
+
+[node name="separator" type="HSeparator" parent="center/vbox"]
+margin_top = 18.0
+margin_right = 152.0
+margin_bottom = 22.0
+
+[node name="instances" type="Button" parent="center/vbox"]
+margin_top = 26.0
+margin_right = 152.0
+margin_bottom = 46.0
+text = "Instance Objects"
+
+[node name="credits" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -263.0
+margin_top = -29.0
+text = "by Nahuel Ourthe: github.com/nourthe"
+
+[connection signal="pressed" from="center/vbox/instances" to="." method="_on_instances_pressed"]
