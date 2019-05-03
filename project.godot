@@ -22,3 +22,7 @@ config/icon="res://icon.png"
 [physics]
 
 2d/default_gravity=500
+
+[rendering]
+
+environment/default_clear_color=Color( 0.121569, 0.121569, 0.121569, 1 )
