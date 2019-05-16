@@ -16,3 +16,7 @@ func _on_instances_pressed():
 
 func _on_events_pressed():
 	get_tree().change_scene("res://examples/events/events.tscn")
+
+
+func _on_random_pressed():
+	get_tree().change_scene("res://examples/random/random.tscn")
