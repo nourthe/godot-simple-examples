@@ -54,6 +54,14 @@ margin_left = -263.0
 margin_top = -29.0
 text = "by Nahuel Ourthe: github.com/nourthe"
 
+[node name="example" type="Label" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -29.0
+margin_right = 418.0
+text = "This menu is also an example. An example of changing scenes"
+align = 2
+
 [connection signal="pressed" from="center/vbox/instances" to="." method="_on_instances_pressed"]
 [connection signal="pressed" from="center/vbox/events" to="." method="_on_events_pressed"]
 [connection signal="pressed" from="center/vbox/random" to="." method="_on_random_pressed"]
