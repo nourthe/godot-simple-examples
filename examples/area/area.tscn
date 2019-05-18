@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://examples/area/area.gd" type="Script" id=1]
+[ext_resource path="res://examples/character.tscn" type="PackedScene" id=2]
+[ext_resource path="res://examples/ball.tscn" type="PackedScene" id=3]
+[ext_resource path="res://examples/ground.tscn" type="PackedScene" id=4]
+[ext_resource path="res://examples/framework.tscn" type="PackedScene" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 100, 100 )
+
+[node name="area" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 300.0 ],
+"_edit_vertical_guides_": [ 520.0 ]
+}
+
+[node name="text" type="Label" parent="."]
+margin_left = 650.0
+margin_top = 230.0
+margin_right = 840.0
+margin_bottom = 250.0
+align = 2
+
+[node name="area" type="Area2D" parent="."]
+
+[node name="color" type="ColorRect" parent="area"]
+margin_left = 650.0
+margin_top = 50.0
+margin_right = 850.0
+margin_bottom = 250.0
+color = Color( 0.823529, 0.913725, 0.0588235, 0.392157 )
+
+[node name="collision" type="CollisionShape2D" parent="area"]
+position = Vector2( 750, 150 )
+shape = SubResource( 1 )
+
+[node name="objects" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="character" parent="objects" instance=ExtResource( 2 )]
+position = Vector2( 520, 300 )
+
+[node name="ball" parent="objects" instance=ExtResource( 3 )]
+position = Vector2( 770, -590 )
+
+[node name="ground" parent="objects" instance=ExtResource( 4 )]
+position = Vector2( 1030, 980 )
+rotation = -3.14159
+
+[node name="groundcolor" type="ColorRect" parent="objects"]
+margin_top = 380.0
+margin_right = 1030.0
+margin_bottom = 610.0
+color = Color( 0.101961, 0.0980392, 0.505882, 0.780392 )
+
+[node name="framework" parent="." instance=ExtResource( 5 )]
+[connection signal="body_entered" from="area" to="." method="_on_area_body_entered"]
+[connection signal="body_exited" from="area" to="." method="_on_area_body_exited"]

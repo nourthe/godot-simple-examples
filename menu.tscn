@@ -13,9 +13,9 @@ anchor_bottom = 1.0
 
 [node name="vbox" type="VBoxContainer" parent="center"]
 margin_left = 436.0
-margin_top = 225.0
+margin_top = 213.0
 margin_right = 588.0
-margin_bottom = 375.0
+margin_bottom = 387.0
 
 [node name="title" type="Label" parent="center/vbox"]
 margin_right = 152.0
@@ -51,15 +51,21 @@ margin_right = 152.0
 margin_bottom = 118.0
 text = "Character Movement"
 
-[node name="separator2" type="HSeparator" parent="center/vbox"]
+[node name="area" type="Button" parent="center/vbox"]
 margin_top = 122.0
 margin_right = 152.0
-margin_bottom = 126.0
+margin_bottom = 142.0
+text = "Area Detector"
 
-[node name="exit" type="Button" parent="center/vbox"]
-margin_top = 130.0
+[node name="separator2" type="HSeparator" parent="center/vbox"]
+margin_top = 146.0
 margin_right = 152.0
 margin_bottom = 150.0
+
+[node name="exit" type="Button" parent="center/vbox"]
+margin_top = 154.0
+margin_right = 152.0
+margin_bottom = 174.0
 text = "Exit"
 
 [node name="credits" type="Label" parent="."]
@@ -78,9 +84,9 @@ margin_top = -29.0
 margin_right = 418.0
 text = "This menu is also an example. An example of changing scenes"
 align = 2
-
 [connection signal="pressed" from="center/vbox/instances" to="." method="_on_instances_pressed"]
 [connection signal="pressed" from="center/vbox/events" to="." method="_on_events_pressed"]
 [connection signal="pressed" from="center/vbox/random" to="." method="_on_random_pressed"]
 [connection signal="pressed" from="center/vbox/character_movement" to="." method="_on_character_movement_pressed"]
+[connection signal="pressed" from="center/vbox/area" to="." method="_on_area_pressed"]
 [connection signal="pressed" from="center/vbox/exit" to="." method="_on_exit_pressed"]
