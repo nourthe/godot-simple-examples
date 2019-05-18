@@ -12,4 +12,11 @@ margin_left = 30.0
 margin_top = 30.0
 text = "Return to Menu"
 
+[node name="reload_scene" type="Button" parent="."]
+margin_left = 30.0
+margin_top = 60.0
+margin_right = 141.0
+margin_bottom = 80.0
+text = "Reload Scene"
 [connection signal="pressed" from="return_menu" to="." method="_on_return_menu_pressed"]
+[connection signal="pressed" from="reload_scene" to="." method="_on_reload_scene_pressed"]
