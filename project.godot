@@ -19,10 +19,18 @@ config/name="Godot Simple Examples"
 run/main_scene="res://menu.tscn"
 config/icon="res://icon.png"
 
+[global]
+
+custom=false
+
+[gui]
+
+theme/custom="res://theme.tres"
+
 [physics]
 
 2d/default_gravity=500
 
 [rendering]
 
-environment/default_clear_color=Color( 0.121569, 0.121569, 0.121569, 1 )
+environment/default_clear_color=Color( 0.682353, 0.827451, 0.827451, 1 )
