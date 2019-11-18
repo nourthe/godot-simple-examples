@@ -25,6 +25,8 @@ func _on_random_pressed():
 func _on_character_movement_pressed():
 	get_tree().change_scene("res://examples/character_movement/character_movement.tscn")
 
+func _on_advanced_movement_pressed():
+	get_tree().change_scene("res://examples/advanced_movement/advanced_movement.tscn")
 
 func _on_area_pressed():
 	get_tree().change_scene("res://examples/area/area.tscn")
@@ -32,5 +34,7 @@ func _on_area_pressed():
 #Exit program
 func _on_exit_pressed():
 	get_tree().quit()
+
+
 
 

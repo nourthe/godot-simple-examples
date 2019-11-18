@@ -1,10 +1,11 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://examples/area/area.gd" type="Script" id=1]
-[ext_resource path="res://examples/character.tscn" type="PackedScene" id=2]
+[ext_resource path="res://examples/character/character.tscn" type="PackedScene" id=2]
 [ext_resource path="res://examples/ball.tscn" type="PackedScene" id=3]
 [ext_resource path="res://examples/ground.tscn" type="PackedScene" id=4]
 [ext_resource path="res://examples/framework.tscn" type="PackedScene" id=5]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 100, 100 )
